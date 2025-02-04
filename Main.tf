@@ -15,7 +15,7 @@ provider "aws" {
 #Creating EC2 Instance
 
 resource "aws_instance" "JenkinsEC2Server" {
-  ami                    = "ami-0c614dee691cbbf37"
+  ami                    = "ami-0c614dee691cbbf37" # Change It to your own AMI
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.JenkinsSG.id]
   subnet_id              = "subnet-0fa21531e3c4921e4"
@@ -31,7 +31,7 @@ resource "aws_instance" "JenkinsEC2Server" {
 resource "aws_security_group" "JenkinsSG" {
   name        = "JenkinsSG"
   description = "Allow traffic on port 8080 and on port 22"
-  vpc_id      = "vpc-0f0dff515f59e2cfb"
+  vpc_id      = "Grab Your Deafault VPC ID"
 
   tags = {
     Name = "JenkinsSG"

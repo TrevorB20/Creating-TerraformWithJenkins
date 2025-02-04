@@ -1,4 +1,3 @@
-#Script to Run & install Jenkins
 #!/bin/bash
 sudo yum update –y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \

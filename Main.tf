@@ -58,7 +58,7 @@ resource "aws_security_group" "JenkinsSG" {
     self        = true
     from_port   = 22
     to_port     = 22
-    cidr_blocks = ["66.108.66.189/32"]
+    cidr_blocks = ["AddyourownIP/32"] #Get Your Own IP from your Loacl machine
   }
   egress {
     from_port   = 0
